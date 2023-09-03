@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
+interface WeatherData {
+  name: string;
+  main: {
+    temp: number;
+  };
+  weather: {
+    description: string;
+  }[];
+}
+
 const WeatherComponent: React.FC = () => {
-  const [weatherData, setWeatherData] = useState<any>(null); // replace 'any' w other types if needed
+  const [weatherData, setWeatherData] = useState<WeatherData | null>(null); // weatherdata is null until fetch is successful
 
   useEffect(() => {
     const apiKey = 'eb58f7958543d47270277234019d256e';
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=city_name&appid=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}`;
 
     console.log('fetching weather data..'); // fetch being attempted
     
