@@ -11,6 +11,17 @@ const SearchBar: React.FC<SearchProps> = ({ buttonOnClick }) => {
         setCity(event.target.value);
       };
 
+    const handleButtonClick = () => {
+    buttonOnClick(city);
+  };
+
+  const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      // when "enter" key pressed, trigger the search
+      buttonOnClick(city);
+    }
+  };
+
       return (
         <div>
         </div>
