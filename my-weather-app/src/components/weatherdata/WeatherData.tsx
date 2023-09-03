@@ -35,6 +35,12 @@ const WeatherComponent: React.FC = () => {
           <h2>Weather in {weatherData.name}</h2>
           <p>Temperature: {weatherData.main.temp}°C</p>
           <p>Weather: {weatherData.weather[0].description}</p>
+          <p>Feels like: </p>
+          <p>Min temp: </p>
+          <p>Max temp: </p>
+          <p>Pressure: </p>
+          <p>Humidity: </p>
+          <p>Speed: </p>
         </div>
       ) : (
         <p>Loading weather data...</p>
