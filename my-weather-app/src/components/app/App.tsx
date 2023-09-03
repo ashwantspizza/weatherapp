@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
 import WeatherData from '../../components/weatherdata/WeatherData';
 
 function App() {

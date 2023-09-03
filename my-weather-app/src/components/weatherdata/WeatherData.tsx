@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
 const WeatherComponent: React.FC = () => {
-  const [weatherData, setWeatherData] = useState<any>(null); // replace any w other types if needed
+  const [weatherData, setWeatherData] = useState<any>(null); // replace 'any' w other types if needed
 
   useEffect(() => {
     const apiKey = 'eb58f7958543d47270277234019d256e';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=city_name&appid=${apiKey}`;
+
+    console.log('fetching weather data..'); // fetch being attempted
     
     fetch(apiUrl)
       .then((response) => response.json())
-      .then((data) => setWeatherData(data))
+      .then((data) => {
+        console.log('fetched weather data:', data);
+        setWeatherData(data);
+      })
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
