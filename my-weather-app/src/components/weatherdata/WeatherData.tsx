@@ -1,21 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
-interface WeatherData {
-  name: string;
-  main: {
-    temp: number;
-  };
-  weather: {
-    description: string;
-  }[];
-} // interface for weatherdata
+const apiKey = 'eb58f7958543d47270277234019d256e';
+
+export async function getWeatherData(cityChoice: string) {
+  const res = await fetch('https://api.openweathermap.org/data/2.5/weather?q={city}}&appid=${apiKey}');
+  const data = await res.json();
+  console.log(res);
 
 const WeatherComponent: React.FC = () => {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null); // weatherdata is null until fetch is successful
 
   useEffect(() => {
     const apiKey = 'eb58f7958543d47270277234019d256e';
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q={city}}&appid=${apiKey}`;
 
     console.log('fetching weather data..'); // fetch being attempted
     
@@ -33,8 +30,8 @@ const WeatherComponent: React.FC = () => {
       {weatherData ? (
         <div>
           <h2>Weather in {weatherData.name}</h2>
-          <p>Temperature: {weatherData.main.temp}°C</p>
-          <p>Weather: {weatherData.weather[0].description}</p>
+          {/* <p>Temperature: {weatherData.main.temp}°C</p> */}
+          {/* <p>Weather: {weatherData.weather[0].description}</p> */}
           <p>Feels like: </p>
           <p>Min temp: </p>
           <p>Max temp: </p>
