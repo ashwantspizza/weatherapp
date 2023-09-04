@@ -7,43 +7,19 @@ export async function getWeatherData(cityChoice: string) {
   const data = await res.json();
   console.log(res);
 
-const WeatherComponent: React.FC = () => {
-  const [weatherData, setWeatherData] = useState<WeatherData | null>(null); // weatherdata is null until fetch is successful
+  const { weather, main: { temp, feels_like, temp_min, temp_max, pressure, humidity }, wind: { speed }, sys: { country }, name } = data;
+  const { description } = weather[0];
 
-  useEffect(() => {
-    const apiKey = 'eb58f7958543d47270277234019d256e';
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q={city}}&appid=${apiKey}`;
-
-    console.log('fetching weather data..'); // fetch being attempted
-    
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('fetched weather data:', data);
-        setWeatherData(data);
-      })
-      .catch((error) => console.error('Error fetching data:', error));
-  }, []);
-
-  return (
-    <div>
-      {weatherData ? (
-        <div>
-          <h2>Weather in {weatherData.name}</h2>
-          {/* <p>Temperature: {weatherData.main.temp}°C</p> */}
-          {/* <p>Weather: {weatherData.weather[0].description}</p> */}
-          <p>Feels like: </p>
-          <p>Min temp: </p>
-          <p>Max temp: </p>
-          <p>Pressure: </p>
-          <p>Humidity: </p>
-          <p>Speed: </p>
-        </div>
-      ) : (
-        <p>Loading weather data...</p>
-      )}
-    </div>
-  );
-};
-
-export default WeatherComponent;
+  return {
+    description,
+    temp,
+    feels_like,
+    temp_min,
+    temp_max,
+    pressure,
+    humidity,
+    speed,
+    country,
+    name,
+  };
+}
