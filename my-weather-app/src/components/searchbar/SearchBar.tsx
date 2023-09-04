@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useState} from 'react';
 
 interface SearchProps {
     buttonOnClick: (city: string) => void;
