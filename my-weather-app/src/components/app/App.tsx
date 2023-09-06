@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 // import './App.css';
 import { getWeatherData } from '/Users/aisling/Documents/projects/weather-app/weatherapp/my-weather-app/src/components/weatherdata/WeatherData';
 import SearchBar from '../../components/searchbar/SearchBar';
@@ -18,6 +18,13 @@ interface WeatherDataProps {
 }
 
 export default function App() {
+
+  const [weather, setWeather] = useState<WeatherDataProps | null>(null);
+  const [cityChoice, setCityChoice] = useState<string>('');
+
+  useEffect(() => {
+    document.title = "Ash's Weather App";
+  }, []);
 
   const handleSearch = (city: string) => {
     console.log(`Searching for city: ${city}`);
