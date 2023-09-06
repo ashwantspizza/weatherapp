@@ -9,7 +9,6 @@ interface WeatherDataProps {
   temp_min: number;
   temp_max: number;
   temp: number;
-  iconURL: string;
   pressure: number;
   humidity: number;
   speed: number;
@@ -29,6 +28,20 @@ export default function App() {
   const handleSearch = (city: string) => {
     console.log(`Searching for city: ${city}`);
   };
+
+  useEffect(() => {
+    const fetchWeatherData = async () => {
+      const data = await getWeatherData(cityChoice);
+      setWeather(data);
+    };
+    fetchWeatherData();
+  }, [cityChoice]);
+
+  function updateCityChoice(city: string) {
+    setCityChoice(city);
+  }
+
+  console.log(weather);
 
   return (
     <div className="App">
