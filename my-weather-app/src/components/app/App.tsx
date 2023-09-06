@@ -1,9 +1,23 @@
 import React from 'react';
 // import './App.css';
-import WeatherData from '../../components/weatherdata/WeatherData';
+import { getWeatherData } from '/Users/aisling/Documents/projects/weather-app/weatherapp/my-weather-app/src/components/weatherdata/WeatherData';
 import SearchBar from '../../components/searchbar/SearchBar';
 
-function App() {
+interface WeatherDataProps {
+  description: string;
+  feels_like: number;
+  temp_min: number;
+  temp_max: number;
+  temp: number;
+  iconURL: string;
+  pressure: number;
+  humidity: number;
+  speed: number;
+  country: string;
+  name: string;
+}
+
+export default function App() {
 
   const handleSearch = (city: string) => {
     console.log(`Searching for city: ${city}`);
@@ -12,9 +26,6 @@ function App() {
   return (
     <div className="App">
       <SearchBar buttonOnClick={handleSearch}/>
-      <WeatherData />
     </div>
   );
-}
-
-export default App;
+};
