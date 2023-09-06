@@ -45,7 +45,9 @@ export default function App() {
 
   return (
     <div className="App">
-      <SearchBar buttonOnClick={handleSearch}/>
+      <SearchBar buttonOnClick={updateCityChoice} />
+      Weather: {weather ? weather.temp : 'Loading...'}
+      City: {cityChoice}
     </div>
   );
 };
