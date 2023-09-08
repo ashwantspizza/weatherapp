@@ -1,21 +1,7 @@
 import React, {useState, useEffect} from 'react';
 // import './App.css';
-import getWeatherData from '../../components/weatherdata/WeatherData';
 import SearchBar from '../../components/searchbar/SearchBar';
 import WeatherData from '../../components/weatherdata/WeatherData';
-
-interface WeatherDataProps {
-  description: string;
-  feels_like: number;
-  temp_min: number;
-  temp_max: number;
-  temp: number;
-  pressure: number;
-  humidity: number;
-  speed: number;
-  country: string;
-  name: string;
-}
 
 export default function App() {
 
@@ -39,9 +25,9 @@ export default function App() {
       setError(null);
 
       try {
-        const data = await getWeatherData(cityChoice);
+        const data = await getWeatherData();
         setWeather(data);
-      } catch (err) {
+      } catch (err: any) {
         setError(err.message);
       } finally {
         setLoading(false);
@@ -64,11 +50,19 @@ export default function App() {
       ) : error ? (
         <p>Error: {error}</p>
       ) : (
-        <WeatherData
-          description={weather?.description || ''}
-          temp={weather?.temp || 0}
-          // ... (other weather properties)
-        />
+        <div>
+          <WeatherData
+              description={weather?.description || ''}
+              temp={weather?.temp || 0}
+              feels_like={weather?.feels_like || 0}
+              temp_min={weather?.temp_min || 0}
+              temp_max={weather?.temp_max || 0}
+              pressure={weather?.pressure || 0}
+              humidity={weather?.humidity || 0}
+              speed={weather?.speed || 0}
+              country={weather?.country || ''}
+              name={weather?.name || ''} />
+        </div>
       )}
       City: {cityChoice}
     </div>
