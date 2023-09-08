@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 // import './App.css';
-import { getWeatherData } from '/Users/aisling/Documents/projects/weather-app/weatherapp/my-weather-app/src/components/weatherdata/WeatherData';
+import getWeatherData from '../../components/weatherdata/WeatherData';
 import SearchBar from '../../components/searchbar/SearchBar';
 import WeatherData from '../../components/weatherdata/WeatherData';
 
@@ -20,7 +20,7 @@ interface WeatherDataProps {
 export default function App() {
 
   const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>('');
+  const [error, setError] = useState<string | null>(null);
 
   const [weather, setWeather] = useState<WeatherDataProps | null>(null);
   const [cityChoice, setCityChoice] = useState<string>('');
