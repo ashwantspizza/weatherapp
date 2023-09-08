@@ -11,7 +11,7 @@ interface DisplayProps {
       speed: number;
       country: string;
       name: string;
-  }, city: string // Update the type according to your actual weather data structure
+  }, city: string;
   }
 
   const Display: React.FC<DisplayProps> = ({ weather, city }) => {

@@ -8,7 +8,7 @@ export async function getWeatherData(cityChoice: string) {
   // console.log(res);
   // console.log(data);
 
-    const { weather, main: { temp, feels_like, temp_min, temp_max, pressure, humidity }, wind: { speed }, sys: { country }, name } = data;
+  const { weather, main: { temp, feels_like, temp_min, temp_max, pressure, humidity }, wind: { speed }, sys: { country }, name } = data;
   const { description } = weather[0];
 
   return {
