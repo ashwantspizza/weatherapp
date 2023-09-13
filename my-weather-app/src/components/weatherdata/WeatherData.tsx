@@ -1,9 +1,7 @@
-import React from 'react';
-
 const apiKey = 'eb58f7958543d47270277234019d256e';
 
 export async function getWeatherData(cityChoice: string) {
-  const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q={cityChoice}&appid=${apiKey}`);
+  const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityChoice}&appid=${apiKey}`);
   const data = await res.json();
   // console.log(res);
   // console.log(data);
