@@ -1,4 +1,5 @@
 import React from 'react';
+import './Display.css';
 
 interface DisplayProps {
     weather: { temp: number;
@@ -16,27 +17,27 @@ interface DisplayProps {
 
   const Display: React.FC<DisplayProps> = ({ weather, city }) => {
     return <div className ="container">
-      <h3 className ="container__title">{`${weather.name}, ${weather.country}`}</h3> 
+      <h3 className ="container_title">{`${weather.name}, ${weather.country}`}</h3> 
                 <small>
-      <p className="container__desc-temp">{Math.round(weather.temp - 273.15)}°C</p>
-      <p className="container__description">{weather.description}</p>
-    <div className="container__desc">
-      <p className="container__desc-feels">Feels like: {Math.round(weather.feels_like - 273.15)}°C</p>
+      <p className="container_desc-temp">{Math.round(weather.temp - 273.15)}°C</p>
+      <p className="container_description">{weather.description}</p>
+    <div className="container_desc">
+      <p className="container_desc-feels">Feels like: {Math.round(weather.feels_like - 273.15)}°C</p>
     </div>
-    <div className="container__desc">
-      <p className="container__desc-min">Min temp: {Math.round(weather.temp_min - 273.15)}°C</p>
+    <div className="container_desc">
+      <p className="container_desc-min">Min temp: {Math.round(weather.temp_min - 273.15)}°C</p>
     </div>
-    <div className="container__desc">
-     <p className= "container__desc-max" >Max temp: {Math.round(weather.temp_max - 273.15)}°C</p>
+    <div className="container_desc">
+     <p className= "container_desc-max" >Max temp: {Math.round(weather.temp_max - 273.15)}°C</p>
      </div>
-     <div className="container__desc">
-      <p className="container__desc-speed">Wind Speed: {weather.speed}m/s</p>
+     <div className="container_desc">
+      <p className="container_desc-speed">Wind Speed: {weather.speed}m/s</p>
     </div>
-    <div className="container__desc">
-      <p className="container__desc-pressure">Pressure: {weather.pressure}hPa</p> 
+    <div className="container_desc">
+      <p className="container_desc-pressure">Pressure: {weather.pressure}hPa</p> 
     </div>
-    <div className="container__desc">
-      <p className ="container__desc-humidity">Humidity: {weather.humidity}%</p>
+    <div className="container_desc">
+      <p className ="container_desc-humidity">Humidity: {weather.humidity}%</p>
     </div>
     </small>
     </div>;
