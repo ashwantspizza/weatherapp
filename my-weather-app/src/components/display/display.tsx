@@ -18,16 +18,16 @@ interface DisplayProps {
     return <div className ="container">
       <h3 className ="container__title">{`${weather.name}, ${weather.country}`}</h3> 
                 <small>
-      <p className="container__desc-temp">{weather.temp}°C</p>
+      <p className="container__desc-temp">{Math.round(weather.temp - 273.15)}°C</p>
       <p className="container__description">{weather.description}</p>
     <div className="container__desc">
-      <p className="container__desc-feels">Feels like: {weather.feels_like}°C</p>
+      <p className="container__desc-feels">Feels like: {Math.round(weather.feels_like - 273.15)}°C</p>
     </div>
     <div className="container__desc">
-      <p className="container__desc-min">Min temp: {weather.temp_min}°C</p>
+      <p className="container__desc-min">Min temp: {Math.round(weather.temp_min - 273.15)}°C</p>
     </div>
     <div className="container__desc">
-     <p className= "container__desc-max" >Max temp: {weather.temp_max}°C</p>
+     <p className= "container__desc-max" >Max temp: {Math.round(weather.temp_max - 273.15)}°C</p>
      </div>
      <div className="container__desc">
       <p className="container__desc-speed">Wind Speed: {weather.speed}m/s</p>
