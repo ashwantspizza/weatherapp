@@ -20,7 +20,7 @@ interface WeatherDataProps {
 export default function App() {
 
   const [weather, setWeather] = useState<WeatherDataProps | null>(null);
-  const [cityChoice, setCityChoice] = useState<string>('');
+  const [cityChoice, setCityChoice] = useState<string>('London');
 
   useEffect(() => {
     document.title = "Ash's Weather App";
