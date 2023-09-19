@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './SearchBar.css';
 
 interface SearchProps {
     buttonOnClick: (city: string) => void;
@@ -25,7 +26,9 @@ const SearchBar: React.FC<SearchProps> = ({ buttonOnClick }) => {
       return (
         <div>
           <input type="text" className="textbox" value={city} onChange={handleInputChange} onKeyDown={handleInputKeyDown} />
-          <button className="button" onClick={handleButtonClick}>Search</button>
+          <div className='button-container'>
+            <button className="button" onClick={handleButtonClick}>Search</button>
+          </div>
         </div>
       );
     };

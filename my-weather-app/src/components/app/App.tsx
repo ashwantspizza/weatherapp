@@ -42,7 +42,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <SearchBar buttonOnClick={updateCityChoice} />
+        <SearchBar buttonOnClick={updateCityChoice} />
       {weather && <Display weather={weather} city={cityChoice} />}
     </div>
   );
