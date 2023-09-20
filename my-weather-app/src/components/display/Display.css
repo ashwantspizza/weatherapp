@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-color: blue;
+    border-style: solid;
 }
 
 .container_title {
