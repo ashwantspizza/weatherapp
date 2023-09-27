@@ -18,14 +18,14 @@
     font-size: 1rem;
     border-radius: .25rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    color: #ffff;
-    border-color: #ffff;
+    color: #05324e;
+    border-color: #05324e;
 }
 
 .button:hover {
-    color: #fff;
-    background-color: #4f4fff;
-    border-color: #4f4fff;
+    color: #e8eee2;
+    background-color: #05324e;
+    border-color: #05324e;
 }
 
 
