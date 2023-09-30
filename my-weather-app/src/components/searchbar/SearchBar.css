@@ -5,6 +5,11 @@
     margin-top: 30px;
 }
 
+.textbox {
+    margin-right: 5px;
+    border-radius: 7px;
+}
+
 .button {
     cursor: pointer;
     outline: 0;
