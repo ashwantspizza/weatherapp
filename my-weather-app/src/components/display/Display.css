@@ -5,7 +5,7 @@
     height: 100%;
 }
 
-.container_title {
+.title-container {
     display: flex;
     font-size: 2rem;
 }
@@ -16,7 +16,7 @@
     font-size: 1.5rem;
 }
 
-.container_description {
+.weather-description {
     display: flex;
     flex-direction: column;
     width: 200px;
@@ -24,10 +24,10 @@
     font-size: 1.5rem;
 }
 
-.container_desc {
+.desc-container {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 500px;
     height: auto;
     margin-bottom: 10px;
     font-size: 2rem;
