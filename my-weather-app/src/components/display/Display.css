@@ -7,12 +7,13 @@
 
 .container_title {
     display: flex;
+    font-size: 2rem;
 }
 
 .temp-container {
     display: flex;
     flex-direction: column;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .container_description {
@@ -20,14 +21,14 @@
     flex-direction: column;
     width: 200px;
     height: 40px;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .container_desc {
     display: flex;
     flex-direction: column;
     width: 200px;
-    height: 40px;
+    height: auto;
     margin-bottom: 10px;
-    font-size: 1rem;
+    font-size: 2rem;
 }
