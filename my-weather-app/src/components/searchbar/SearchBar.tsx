@@ -24,7 +24,7 @@ const SearchBar: React.FC<SearchProps> = ({ buttonOnClick }) => {
   };
 
       return ( <>
-        <h1>Type in a city!</h1>
+        <h1 className='type-city-prompt'>Type in a city!</h1>
         <div className='search'>
           <input type="text" className="textbox" value={city} onChange={handleInputChange} onKeyDown={handleInputKeyDown} />
           <div className='button-container'>

@@ -5,7 +5,6 @@ import { getWeatherData } from '../../components/weatherdata/WeatherData';
 import Display from '../../components/display/Display';
 
 interface WeatherDataProps {
-  description: string;
   feels_like: number;
   temp_min: number;
   temp_max: number;

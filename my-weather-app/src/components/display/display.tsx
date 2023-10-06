@@ -3,7 +3,6 @@ import './Display.css';
 
 interface DisplayProps {
     weather: { temp: number;
-      description: string;
       feels_like: number;
       temp_min: number;
       temp_max: number;
@@ -20,7 +19,6 @@ interface DisplayProps {
 
       <h3 className ="city-title-container">{`${weather.name}, ${weather.country}`}</h3> 
       <p className="temp-container">{Math.round(weather.temp - 273.15)}°C</p>
-      <p className="weather-description">{weather.description}</p>
 
     <div className="desc-container"> <strong>Feels like:</strong> {Math.round(weather.feels_like - 273.15)}°C </div>
     <div className="desc-container"><strong>Min temp:</strong> {Math.round(weather.temp_min - 273.15)}°C </div>
