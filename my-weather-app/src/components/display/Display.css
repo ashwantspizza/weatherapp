@@ -5,7 +5,7 @@
     height: 100%;
 }
 
-.title-container {
+.city-title-container {
     display: flex;
     font-size: 2rem;
 }
@@ -24,9 +24,13 @@
     font-size: 1.5rem;
 }
 
+.desc-container strong {
+    margin-right: 20px;
+}
+
 .desc-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
     margin-bottom: 10px;
     font-size: 2rem;

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .textbox {
@@ -14,7 +14,8 @@
     cursor: pointer;
     outline: 0;
     display: inline-block;
-    font-weight: 400;
+    font-weight: 700;
+    font-family: 'Indie Flower', cursive;
     line-height: 1.5;
     text-align: center;
     background-color: transparent;

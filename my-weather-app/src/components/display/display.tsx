@@ -17,8 +17,8 @@ interface DisplayProps {
 
   const Display: React.FC<DisplayProps> = ({ weather, city }) => {
     return <div className ="container">
-      
-      <h3 className ="title-container">{`${weather.name}, ${weather.country}`}</h3> 
+
+      <h3 className ="city-title-container">{`${weather.name}, ${weather.country}`}</h3> 
       <p className="temp-container">{Math.round(weather.temp - 273.15)}°C</p>
       <p className="weather-description">{weather.description}</p>
 
