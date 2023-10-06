@@ -9,6 +9,7 @@ interface WeatherDataProps {
   temp_min: number;
   temp_max: number;
   temp: number;
+  iconURL: string;
   pressure: number;
   humidity: number;
   speed: number;
