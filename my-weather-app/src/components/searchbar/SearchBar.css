@@ -28,14 +28,14 @@
     font-size: 1rem;
     border-radius: .25rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    color: #05324e;
-    border-color: #05324e;
+    color: #1c5dd8;
+    border-color: #1c5dd8;
 }
 
 .button:hover {
     color: #e8eee2;
-    background-color: #05324e;
-    border-color: #05324e;
+    background-color: #1c5dd8;
+    border-color: #1c5dd8;
 }
 
 

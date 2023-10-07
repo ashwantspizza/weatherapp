@@ -19,7 +19,7 @@ interface DisplayProps {
     return <div className ="container">
 
       <h3 className ="city-title-container">{`${weather.name}, ${weather.country}`}</h3>
-      <img
+      <img className="icon-container"
                 src={weather.iconURL} 
                 alt="Weather Icon"
               />

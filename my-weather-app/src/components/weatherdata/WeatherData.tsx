@@ -3,7 +3,7 @@ const makeIconUrl = (iconId: number) => `https://openweathermap.org/img/wn/${ico
 
 export async function getWeatherData(cityChoice: string) {
   const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityChoice}&appid=${apiKey}`);
-  const data = await res.json();
+  const data = await res.json(); //fetching data from api
   // console.log(res);
   console.log(data);
 
@@ -22,5 +22,5 @@ export async function getWeatherData(cityChoice: string) {
     speed,
     country,
     name,
-  };
+  }; // returning object with data defined
 };
