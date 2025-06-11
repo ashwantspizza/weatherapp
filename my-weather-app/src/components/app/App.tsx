@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import SearchBar from '../../components/searchbar/SearchBar';
 import { getWeatherData } from '../../components/weatherdata/WeatherData';
-import Display from '../../components/display/Display';
+import Display from '../display/Display';
 
 interface WeatherDataProps {
   feels_like: number;
