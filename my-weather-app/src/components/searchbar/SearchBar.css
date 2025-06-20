@@ -12,7 +12,8 @@
 
 .textbox {
     margin-right: 5px;
-    border-radius: 7px;
+    border-radius: .35rem;
+    border-color: #293A44;
 }
 
 .button {
@@ -20,23 +21,21 @@
     outline: 0;
     display: inline-block;
     font-weight: 700;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Margarine', cursive;
     line-height: 1.5;
     text-align: center;
     background-color: transparent;
     border: 1px solid transparent;
     padding: 6px 12px;
     font-size: 1rem;
-    border-radius: .25rem;
+    border-radius: .35rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    color: #1c5dd8;
-    border-color: #1c5dd8;
+    color: #293A44;
+    border-color: #293A44;
 }
 
 .button:hover {
-    color: #e8eee2;
-    background-color: #1c5dd8;
-    border-color: #1c5dd8;
+    color: #293A44;
+    background-color: #ff6145;
+    border-color: #ff6145;
 }
-
-
