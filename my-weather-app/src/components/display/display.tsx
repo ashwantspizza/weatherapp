@@ -18,12 +18,16 @@ interface DisplayProps {
   const Display: React.FC<DisplayProps> = ({ weather, city }) => {
     return <div className ="container">
 
+    <div className='city-icon-temp-container'>
+
       <h3 className ="city-title-container">{`${weather.name}, ${weather.country}`}</h3>
       <img className="icon-container"
                 src={weather.iconURL} 
                 alt="Weather Icon"
               />
       <p className="temp-container">{Math.round(weather.temp - 273.15)}°C</p>
+      
+    </div>
 
     <div className="desc-container"> <strong>Feels like:</strong> {Math.round(weather.feels_like - 273.15)}°C </div>
     <div className="desc-container"><strong>Min temp:</strong> {Math.round(weather.temp_min - 273.15)}°C </div>

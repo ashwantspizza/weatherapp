@@ -12,6 +12,8 @@
 
 .textbox {
     margin-right: 5px;
+    font-size: 1.25rem;
+    font-family: 'Margarine', cursive;
     border-radius: .35rem;
     border-color: #293A44;
 }
